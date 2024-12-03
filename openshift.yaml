@@ -1,4 +1,3 @@
-
 ---
 # Deployment: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 # In short is an abstraction on top of Pods and you describe the desired state of your pods in it. The Deployment controller will make sure that state is met.
@@ -23,14 +22,14 @@ spec:
         app: dev-alm-workshop-2024-app
     spec:
       containers:
-      - name: workshop
-        # TODO: Update iamge to your image
-        image: >-
-          <<TODO>>
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 3000
-          protocol: TCP
+        - name: workshop
+          # TODO: Update iamge to your image
+          image: >-
+            <<TODO>>
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              protocol: TCP
 ---
 # Service: https://kubernetes.io/docs/concepts/services-networking/service/
 # In short: a Service is a method for exposing a network application that is running as one or more Pods in your cluster. It uses the dynamic service discovery via labels to allow for new pods to start / stop on-demand.
@@ -42,10 +41,10 @@ metadata:
     app: dev-alm-workshop-2024-app
 spec:
   ports:
-  - name: 3000-tcp
-    protocol: TCP
-    port: 3000
-    targetPort: 3000
+    - name: 3000-tcp
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
   # This indicates to which pods the service will bind
   selector:
     app: dev-alm-workshop-2024-app
