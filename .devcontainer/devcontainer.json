@@ -4,7 +4,7 @@
 {
   "name": "OpenShift + Docker DevContainer",
   // Use Debian based base image to support Golang feature
-  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
   "customizations": {
     "vscode": {
       // Open in VSCode by pressing together "CTRL + SHIFT + P" & Type "Open Remote Preferences (JSON)"
