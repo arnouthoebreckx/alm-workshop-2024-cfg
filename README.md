@@ -27,6 +27,10 @@ The configuration repository is called **alm-workshop-2024-cfg**. You've been pr
 
 One thing to note is that this repository starts from the **"dev"** branch as primary branch. We will create more branches per environment later on in the exercise, but we use this model in practice often to easily compare configuration changes between environments using Git Diffs & granular approvals per pull-request so that the right people approve for the right environments.
 
+## Devcontainer
+
+There is another devcontainer available for you to use that has OpenShift CLI / Helm installed for you to use. Create the codespace for this repository like you did in the previous.
+
 ## Task 1
 
 :exclamation: **This task needs to be completed in the alm-workshop-2024-src code repository**
@@ -37,6 +41,7 @@ One thing to note is that this repository starts from the **"dev"** branch as pr
 
 ## Task 3
 
+* ***Fork** the base repository to your own account!*
 * Login to RedHat Openshift Sandbox https://console.redhat.com/openshift/sandbox
   * Press "Getting started"
   * You should be able to launch OpenShift
