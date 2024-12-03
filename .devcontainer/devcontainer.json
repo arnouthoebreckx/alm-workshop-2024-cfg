@@ -29,8 +29,10 @@
   },
   // Features are automatically installed when container is created https://containers.dev/features
   "features": {
-    "ghcr.io/paul-gilber/devcontainer-features/openshift-cli-homebrew:1": {},
     "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  }
+  },
+  // Post-create command to install OpenShift CLI
+  // Because the openshift-cli feature does not work
+  "postCreateCommand": "curl -L https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/openshift-client-linux-arm64.tar.gz | tar -xz -C /tmp && sudo mv /tmp/oc /usr/local/bin && sudo chmod +x /usr/local/bin/oc"
 }
