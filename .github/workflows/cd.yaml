@@ -25,4 +25,4 @@ jobs:
           namespace: ${{ env.OPENSHIFT_NAMESPACE }}
       - name: Apply Openshift YAML
         run: |
-          kubectl apply -f openshift.yaml -n aernouthoebreckx-dev
+          kubectl apply -f openshift.yaml -n $OPENSHIFT_NAMESPACE
